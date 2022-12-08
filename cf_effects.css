@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 4
+   Case Problem 3
+   
+   Design Styles for the Chupacabra Music Fest
+   Author: Hesbon Osoro
+   Date: 12/8/22  
+   
+   Filename: cf_effects.css
+
+*/
+
+/* HTML Styles */
+html {
+  background-image: url(cf_back1.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* Body Styles */
+body {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Body Header Styles */
+body > header {
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+/* Aside Styles */
+
+section aside {
+  border: 10px double rgba(92, 42, 8, 0.3);
+  border-radius: 30px;
+}
+
+section aside h1 {
+  border-radius: 30px 30px 0 0;
+}
+
+section#left {
+  perspective: 450px;
+}
+
+section#left aside {
+  transform: rotateY(25deg);
+}
+
+section#right {
+  perspective: 450px;
+}
+
+section#right aside {
+  transform: rotateY(-25deg);
+}
+
+/* Cube Styles */
+
+div#cube {
+  position: relative;
+  margin: 180px auto 150px auto;
+  width: 400px;
+  height: 400px;
+  perspective: 450px;
+}
+
+div.cube_face {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+}
+
+div#cube_front {
+  transform: translateZ(-50px);
+}
+
+div#cube_left {
+  transform: translateX(-200px) rotateY(90deg);
+}
+
+div#cube_right {
+  transform: translateX(200px) rotateY(-90deg);
+}
+
+div#cube_top {
+  transform: translateY(-200px) rotateX(-90deg);
+}
+
+div#cube_bottom {
+  transform: translateY(200px) rotateX(90deg);
+}
